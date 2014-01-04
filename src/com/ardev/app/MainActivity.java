@@ -3,7 +3,9 @@ package com.ardev.app;
 import java.util.Locale;
 
 import android.app.ActionBar;
+import android.app.AlertDialog;
 import android.app.FragmentTransaction;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -121,7 +123,11 @@ public class MainActivity extends FragmentActivity implements
 			// below) with the page number as its lone argument.
 			Fragment fragment = null;
 			
-			if(position == 1)
+			if(position == 0)
+			{
+				fragment = new MainFragment();
+			}
+			else if(position == 1)
 			{
 				fragment = new ListeFragment();
 			}
